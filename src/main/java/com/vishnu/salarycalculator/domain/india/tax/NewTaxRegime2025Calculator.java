@@ -32,7 +32,8 @@ public class NewTaxRegime2025Calculator implements IncomeTaxCalculator {
             tax = tax.add(slabTax);
             previous = upper;
         }
-        return tax.setScale(0, RoundingMode.HALF_UP);
+        BigDecimal taxWithCess = tax.multiply(new BigDecimal("1.04"));
+        return taxWithCess.setScale(2, RoundingMode.HALF_UP);
     }
 
 }

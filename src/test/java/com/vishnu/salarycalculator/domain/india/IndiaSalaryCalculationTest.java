@@ -1,5 +1,6 @@
 package com.vishnu.salarycalculator.domain.india;
 
+import com.vishnu.salarycalculator.domain.india.tax.TaxRegime;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -12,12 +13,11 @@ class IndiaSalaryCalculationTest {
     void shouldCalculateMonthlyTakeHome_givenFixedPayUnderNewTaxRegime2025() {
         var input = new IndiaSalaryInput(
                 new BigDecimal("2236395.00"),
-                2025,
-                "NEW"
+                TaxRegime.newRegimeFor2025()
         );
         var calculator = new IndiaSalaryCalculator();
         var result = calculator.calculate(input);
         assertThat(result.monthlyTakeHome())
-                .isEqualTo(new BigDecimal("144129.66"));
+                .isEqualTo(new BigDecimal("144268"));
     }
 }

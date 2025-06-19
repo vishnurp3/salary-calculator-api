@@ -11,10 +11,10 @@ public record IndiaSalaryStructure(
 ) {
     public static IndiaSalaryStructure fromFixedPay(BigDecimal fixedPay) {
         BigDecimal multiplier = new BigDecimal("2.1681");
-        BigDecimal basic = fixedPay.divide(multiplier, 0, RoundingMode.HALF_UP);
+        BigDecimal basic = fixedPay.divide(multiplier, 2, RoundingMode.HALF_UP);
         BigDecimal cashAllowance = basic;
-        BigDecimal employerPf = basic.multiply(new BigDecimal("0.12")).setScale(0, RoundingMode.HALF_UP);
-        BigDecimal gratuity = basic.multiply(new BigDecimal("0.0481")).setScale(0, RoundingMode.HALF_UP);
+        BigDecimal employerPf = basic.multiply(new BigDecimal("0.12")).setScale(2, RoundingMode.HALF_UP);
+        BigDecimal gratuity = basic.multiply(new BigDecimal("0.0481")).setScale(2, RoundingMode.HALF_UP);
         return new IndiaSalaryStructure(
                 basic,
                 cashAllowance,

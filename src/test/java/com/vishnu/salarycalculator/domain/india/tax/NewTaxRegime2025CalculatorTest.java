@@ -12,7 +12,7 @@ class NewTaxRegime2025CalculatorTest {
     void shouldCalculateCorrectAnnualIncomeTax() {
         var calculator = new NewTaxRegime2025Calculator();
         BigDecimal taxableIncome = new BigDecimal("1800000");
-        BigDecimal expectedTax = new BigDecimal("145000");
+        BigDecimal expectedTax = new BigDecimal("150800.00");
         BigDecimal tax = calculator.calculateAnnualTax(taxableIncome);
         assertThat(tax).isEqualTo(expectedTax);
     }

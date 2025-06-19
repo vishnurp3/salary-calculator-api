@@ -13,12 +13,12 @@ class IndiaSalaryStructureTest {
         var fixedPay = new BigDecimal("2236395.00");
         var structure = IndiaSalaryStructure.fromFixedPay(fixedPay);
         assertThat(structure.basicPay())
-                .isEqualByComparingTo(new BigDecimal("1031500.00"));
+                .isEqualByComparingTo(new BigDecimal("1031499.93"));
         assertThat(structure.cashAllowance())
-                .isEqualByComparingTo(new BigDecimal("1031500.00"));
+                .isEqualByComparingTo(new BigDecimal("1031499.93"));
         assertThat(structure.employerPf())
-                .isEqualByComparingTo(new BigDecimal("123780.00"));
+                .isEqualByComparingTo(new BigDecimal("123779.99"));
         assertThat(structure.gratuity())
-                .isEqualByComparingTo(new BigDecimal("49615.00"));
+                .isEqualByComparingTo(new BigDecimal("49615.15"));
     }
 }
