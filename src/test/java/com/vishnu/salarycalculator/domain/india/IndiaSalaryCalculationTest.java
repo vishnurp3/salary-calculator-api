@@ -1,7 +1,5 @@
-package com.vishnu.salarycalculator.domain;
+package com.vishnu.salarycalculator.domain.india;
 
-import com.vishnu.salarycalculator.domain.india.IndiaSalaryCalculator;
-import com.vishnu.salarycalculator.domain.india.IndiaSalaryInput;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
