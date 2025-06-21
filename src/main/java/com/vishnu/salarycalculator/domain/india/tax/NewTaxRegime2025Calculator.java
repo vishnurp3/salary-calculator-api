@@ -26,7 +26,9 @@ public class NewTaxRegime2025Calculator implements IncomeTaxCalculator {
         for (BigDecimal[] slab : slabs) {
             BigDecimal upper = slab[0];
             BigDecimal rate = slab[1];
-            if (reducedIncome.compareTo(previous) <= 0) break;
+            if (reducedIncome.compareTo(previous) <= 0) {
+                break;
+            }
             BigDecimal taxableAtThisSlab = reducedIncome.min(upper).subtract(previous);
             BigDecimal slabTax = taxableAtThisSlab.multiply(rate);
             tax = tax.add(slabTax);

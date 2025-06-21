@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-class IndiaSalaryCalculationTest {
+class IndiaSalaryCalculatorTest {
 
     private final IndiaSalaryCalculator calculator = new IndiaSalaryCalculator(
             new IndiaIncomeTaxCalculatorResolver()
