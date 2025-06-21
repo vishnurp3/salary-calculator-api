@@ -11,7 +11,7 @@ public class SecurityConfiguration {
     public FilterRegistrationBean<ApiKeyAuthFilter> apiKeyFilter(ApiKeyAuthFilter filter) {
         FilterRegistrationBean<ApiKeyAuthFilter> registration = new FilterRegistrationBean<>();
         registration.setFilter(filter);
-        registration.addUrlPatterns("/india/salary/*");
+        registration.addUrlPatterns("/api/v1/india/salary/*");
         registration.setOrder(1);
         return registration;
     }
